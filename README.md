@@ -1,4 +1,4 @@
-# ExpenseTrackr
+# ExpenseTracker
 
 A simple web app to track daily expenses and see where your money goes. Built during my 1-month Web Development (JavaScript) internship at EWB Courses.
 
