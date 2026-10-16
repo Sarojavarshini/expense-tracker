@@ -1,0 +1,142 @@
+:root {
+  --bg: #f3f6f4;
+  --card: #fff;
+  --text: #16231d;
+  --muted: #5d6b64;
+  --line: #dfe6e2;
+  --accent: #1f7a5a;
+  --danger: #b3382c;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101815;
+    --card: #18231f;
+    --text: #e8f0ec;
+    --muted: #9baba3;
+    --line: #2a3832;
+    --accent: #3fbf93;
+    --danger: #e8715f;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+h1 {
+  margin: 0 0 4px;
+  font-size: 1.8rem;
+}
+.sub {
+  color: var(--muted);
+  margin: 0 0 20px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px;
+}
+.total {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 4px 0 0;
+}
+label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 10px 0 4px;
+}
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+}
+input:focus,
+select:focus,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+.add {
+  width: 100%;
+  margin-top: 14px;
+  padding: 11px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+li:last-child {
+  border-bottom: 0;
+}
+.meta {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+.amt {
+  font-weight: 600;
+  white-space: nowrap;
+}
+.del {
+  border: 0;
+  background: none;
+  color: var(--danger);
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+.empty {
+  color: var(--muted);
+  text-align: center;
+  padding: 20px 0;
+}
+.chart-box {
+  position: relative;
+  height: 260px;
+}

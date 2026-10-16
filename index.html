@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ExpenseTrackr</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>ExpenseTrackr</h1>
+  <p class="sub">Add your expenses and see where your money goes.</p>
+
+  <div class="grid">
+    <section class="card">
+      <div class="meta">Total spent</div>
+      <p class="total" id="total">₹0.00</p>
+
+      <label for="title">Title</label>
+      <input id="title" type="text" placeholder="e.g. Lunch">
+
+      <label for="amount">Amount (₹)</label>
+      <input id="amount" type="number" min="0" step="0.01" placeholder="e.g. 120">
+
+      <label for="category">Category</label>
+      <select id="category">
+        <option>Food</option>
+        <option>Travel</option>
+        <option>Shopping</option>
+        <option>Bills</option>
+        <option>Other</option>
+      </select>
+
+      <label for="date">Date</label>
+      <input id="date" type="date">
+
+      <button class="add" id="addBtn">Add expense</button>
+    </section>
+
+    <section class="card">
+      <div class="meta">Spending by category</div>
+      <div class="chart-box"><canvas id="chart"></canvas></div>
+    </section>
+  </div>
+
+  <section class="card" style="margin-top:16px">
+    <div class="meta">Your expenses</div>
+    <ul id="list"></ul>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
